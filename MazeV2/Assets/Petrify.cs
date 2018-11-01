@@ -20,12 +20,13 @@ public class Petrify : MonoBehaviour {
         
  }
 
+
     void OnCollisionEnter(Collision col)
     {
-        
-        if (col.gameObject.name == playerL.name || col.gameObject.name == playerR.name)
+        Debug.Log(col.gameObject.name);
+        if (col.gameObject.name == "LeftControllerScriptAlias" || col.gameObject.name == "RightControllerScriptAlias" || col.gameObject.name == "VRSimulator_CameraRig")
         {
-            Debug.Log(col.gameObject.name);
+
             uiPiece.text = "Oh dear.";
         }
         else
@@ -34,7 +35,5 @@ public class Petrify : MonoBehaviour {
             uiPiece.text = "All good.";
         }
     }
-
-
 
 }
