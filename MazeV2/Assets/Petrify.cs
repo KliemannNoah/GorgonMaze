@@ -13,20 +13,30 @@ public class Petrify : MonoBehaviour {
     public GameObject playerR;
     public TextMesh uiPiece;
 
+    public float health=100;
+    public float healthMod = 1;
+    private bool petrifying = false;
+
     // Use this for initialization
     void Start () {
     }
 
+    void Update() {
+        if (petrifying)
+        {
+            health -= healthMod;
+        }
+        uiPiece.text = "Current Health: " + health;
+    }
+
     void OnCollisionEnter(Collision col)
     {
-        Debug.Log(col.gameObject.name);
-            uiPiece.text = "Oh dear.";
+        petrifying = true;
     }
 
     void OnCollisionExit(Collision col)
     {
-            //TODO: move to exit
-            uiPiece.text = "All good.";
+        petrifying = false;
     }
 
 }
