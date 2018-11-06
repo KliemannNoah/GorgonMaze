@@ -12,43 +12,15 @@ public class Petrify : MonoBehaviour {
     public GameObject playerL;
     public GameObject playerR;
     public TextMesh uiPiece;
-    private Vector3 lastPosition = new Vector3();
-    private Vector3 lastVelocity = new Vector3();
-    private Vector3 lastAngularVelocity = new Vector3();
 
     // Use this for initialization
     void Start () {
-        source.GetComponent<Renderer>().enabled = false;
-    }
-	
-	// Update is called once per frame
-	void Update () {
-        lastPosition = transform.position;
-        lastVelocity = GetComponent<Rigidbody>().velocity;
-        lastAngularVelocity = GetComponent<Rigidbody>().angularVelocity;
-
-    }
-
-    void FixedUpdate()
-    {
-        
     }
 
     void OnCollisionEnter(Collision col)
     {
-
-        transform.position = lastPosition;
-        GetComponent<Rigidbody>().velocity = lastVelocity;
-        GetComponent<Rigidbody>().angularVelocity = lastAngularVelocity;
-        Physics.IgnoreCollision(GetComponent<Collider>(), col.collider);
-
         Debug.Log(col.gameObject.name);
-        if (col.gameObject.name == "LeftControllerScriptAlias" || col.gameObject.name == "RightControllerScriptAlias" || col.gameObject.name == "VRSimulator_CameraRig")
-        {
-
             uiPiece.text = "Oh dear.";
-        }
-
     }
 
     void OnCollisionExit(Collision col)
