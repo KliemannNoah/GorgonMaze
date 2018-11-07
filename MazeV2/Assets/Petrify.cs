@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class Petrify : MonoBehaviour {
 
+    public AudioSource petrifySound;
     public GameObject source;
     public GameObject playerL;
     public GameObject playerR;
@@ -31,11 +32,13 @@ public class Petrify : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
+	petrifySound.Play(0);
         petrifying = true;
     }
 
     void OnCollisionExit(Collision col)
     {
+	petrifySound.Pause();
         petrifying = false;
     }
 
