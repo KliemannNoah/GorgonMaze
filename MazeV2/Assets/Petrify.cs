@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//https://forum.unity.com/threads/how-can-you-detect-but-still-physically-ignore-collisions.111583/
-//Collider -> Trigger fix by Eric5h5 on the above link
 
 
 public class Petrify : MonoBehaviour {
@@ -13,6 +11,8 @@ public class Petrify : MonoBehaviour {
     public GameObject playerL;
     public GameObject playerR;
     public TextMesh uiPiece;
+
+    public Animator animator;
 
     public float health=100;
     public float healthMod = 1;
@@ -33,7 +33,8 @@ public class Petrify : MonoBehaviour {
     void OnCollisionEnter(Collision col)
     {
 	petrifySound.Play(0);
-        petrifying = true;
+   animator.SetBool("jennyAttack", true);
+    petrifying = true;
     }
 
     void OnCollisionExit(Collision col)
