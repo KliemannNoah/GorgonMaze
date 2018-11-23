@@ -35,6 +35,7 @@ public class Petrify : MonoBehaviour {
 	petrifySound.Play(0);
    animator.SetBool("jennyAttack", true);
     petrifying = true;
+        Debug.Log("Colliding!");
     }
 
     void OnCollisionExit(Collision col)
