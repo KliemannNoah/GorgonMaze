@@ -3113,11 +3113,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &529511749 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 9be987cd448178c40850cfe6130fa9e8,
+    type: 3}
+  m_PrefabInternal: {fileID: 1458092604}
 --- !u!4 &529511750 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400006, guid: 9be987cd448178c40850cfe6130fa9e8,
     type: 3}
   m_PrefabInternal: {fileID: 1458092604}
+--- !u!122 &529511753
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 529511749}
+  m_Enabled: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 1308631334
+  m_Size: 0.65
 --- !u!4 &536544715 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 409034, guid: f5012c134e93bed489ed12fa5dafe97d,
@@ -3773,6 +3789,66 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &753483372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 753483374}
+  - component: {fileID: 753483373}
+  m_Layer: 0
+  m_Name: vidTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!328 &753483373
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 753483372}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: c8dd6287cb58e3a49aaf8048e91ce02c, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 9987e763ff1e97648a30bb203bd04bd0, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: _MainTex
+  m_RenderMode: 2
+  m_AspectRatio: 5
+  m_DataSource: 0
+  m_PlaybackSpeed: 1.5
+  m_AudioOutputMode: 2
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
+  m_Url: file://C:/Users/Savannah/Pictures/QueenAnnesLace.mp4
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+--- !u!4 &753483374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 753483372}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.74, y: 2.9872313, z: 6.643579}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &757423800
 GameObject:
   m_ObjectHideFlags: 0
@@ -6279,13 +6355,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1247586292}
-  m_LocalRotation: {x: 0.0016857737, y: 0.99468744, z: -0.015376149, w: -0.10177247}
-  m_LocalPosition: {x: -0.00278, y: 0.00106, z: -0.0109}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.20806615, y: -0.97720546, z: -0.033972416, w: -0.024977654}
+  m_LocalPosition: {x: -0.0007, y: -0.0005, z: -0.0012}
+  m_LocalScale: {x: 0.55653, y: 0.45557, z: 0.5901254}
   m_Children: []
   m_Father: {fileID: 529511750}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 1.733, y: 191.68999, z: 0.372}
+  m_LocalEulerAnglesHint: {x: -3.21, y: 176.38501, z: 384.141}
 --- !u!108 &1247586294
 Light:
   m_ObjectHideFlags: 0
@@ -6295,11 +6371,11 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.8396226, g: 0.8002502, b: 0.30495724, a: 1}
-  m_Intensity: 3
-  m_Range: 2
-  m_SpotAngle: 30
-  m_CookieSize: 10
+  m_Color: {r: 0.9056604, g: 0.8651394, b: 0.35457456, a: 1}
+  m_Intensity: 10
+  m_Range: 1
+  m_SpotAngle: 48
+  m_CookieSize: 0
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
@@ -6318,10 +6394,10 @@ Light:
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.60930824, y: 1}
-  m_BounceIntensity: 2
+  m_BounceIntensity: 5
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_ShadowRadius: 0
+  m_ShadowRadius: 2
   m_ShadowAngle: 0
 --- !u!1 &1260513394
 GameObject:
@@ -7152,7 +7228,7 @@ Prefab:
     - target: {fileID: 2300006, guid: 9be987cd448178c40850cfe6130fa9e8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 923e268f8115cbf4f8d91218d1ad11d9, type: 2}
+      objectReference: {fileID: 2100000, guid: 289de792b69d5ec4d8c873feae0179ab, type: 2}
     - target: {fileID: 2300010, guid: 9be987cd448178c40850cfe6130fa9e8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9500,7 +9576,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 0.3027426, g: 0.20305268, b: 0.3679245, a: 1}
+  m_Color: {r: 0.25759462, g: 0.24795298, b: 0.26415092, a: 1}
   m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
