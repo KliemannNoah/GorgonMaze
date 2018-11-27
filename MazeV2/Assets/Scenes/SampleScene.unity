@@ -2717,6 +2717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jennyAni: {fileID: 497778435}
+  target: {fileID: 413670377}
 --- !u!95 &497778435 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: efb4c2b6f5e9b564bab74e9cfd241055,
@@ -4581,7 +4582,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d9541a81ec52f7b4c9eb95856ec82d8d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.6
+      value: -0.722
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d9541a81ec52f7b4c9eb95856ec82d8d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9427,7 +9428,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400132, guid: efb4c2b6f5e9b564bab74e9cfd241055, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.51
+      value: -6.922
       objectReference: {fileID: 0}
     - target: {fileID: 400132, guid: efb4c2b6f5e9b564bab74e9cfd241055, type: 3}
       propertyPath: m_LocalRotation.x

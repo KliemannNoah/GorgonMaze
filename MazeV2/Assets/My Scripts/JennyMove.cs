@@ -7,6 +7,11 @@ public class JennyMove : MonoBehaviour {
 
     //controller for all Jenny movements
     public Animator jennyAni;
+    public Transform target;
+    bool walking = false;
+
+    float step;
+    float speed = 2;
     //Stored Animations as of 11/27/18
 
     //CAN BE ACCESSED FROM ANY OTHER ANIMATION STATE
@@ -20,13 +25,29 @@ public class JennyMove : MonoBehaviour {
 
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         jennyAgony();
     }
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (walking)
+        {
+            if (transform.position == target.position)
+            {
+                walking = false;
+            }
+            else
+            {
+                step = speed * Time.deltaTime;
+                transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+            }
+           
+        }
+      
+
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -35,12 +56,12 @@ public class JennyMove : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(1))
         {
-            jennyHurt();
+            jennyWalk();
         }
 
         if (Input.GetMouseButtonDown(2))
         {
-            jennyBiteAttack();
+            jennyWalk();
         }
 
     }
@@ -81,6 +102,14 @@ public class JennyMove : MonoBehaviour {
     public void jennyFeast()
     {
         jennyAni.Play("jennyFeast");
+    }
+
+
+    public void jennyWalk()
+    {
+        jennyAni.Play("jennyWalk");
+        jennyAni.SetBool("jennyWalk", true);
+        walking = true;
     }
 
 
