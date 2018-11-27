@@ -33,8 +33,8 @@ public class Petrify : MonoBehaviour {
     void OnCollisionEnter(Collision col)
     {
 	petrifySound.Play(0);
-   //animator.SetBool("jennyAttack", true);
-    petrifying = true;
+        animator.Play("jennyArmAttack");
+        petrifying = true;
     }
 
     void OnCollisionExit(Collision col)

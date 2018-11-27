@@ -2700,6 +2700,28 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 490661778}
   m_Mesh: {fileID: 4300000, guid: 76e15ece664ee41ada45b8500a673f22, type: 3}
+--- !u!1 &497778432 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100132, guid: efb4c2b6f5e9b564bab74e9cfd241055,
+    type: 3}
+  m_PrefabInternal: {fileID: 1969397299}
+--- !u!114 &497778433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 497778432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d916864963e144049b881d5ba75d5b48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jennyAni: {fileID: 497778435}
+--- !u!95 &497778435 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: efb4c2b6f5e9b564bab74e9cfd241055,
+    type: 3}
+  m_PrefabInternal: {fileID: 1969397299}
 --- !u!1001 &498005376
 Prefab:
   m_ObjectHideFlags: 0
@@ -10272,7 +10294,7 @@ MonoBehaviour:
   playerL: {fileID: 2117728151}
   playerR: {fileID: 975694330}
   uiPiece: {fileID: 1439793428}
-  animator: {fileID: 0}
+  animator: {fileID: 497778435}
   health: 100
   healthMod: 1
 --- !u!1 &2121440818
