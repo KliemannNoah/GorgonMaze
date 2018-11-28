@@ -111,8 +111,8 @@ public class JennyMove : MonoBehaviour {
     {
         jennyAni.Play("jennyWalk");
         jennyAni.SetBool("jennyWalk", true);
-
         target.position = new Vector3 (target.position.x, -0.8f, target.position.z);
+
         walking = true;
     }
 
