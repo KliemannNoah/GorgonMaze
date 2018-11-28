@@ -8,10 +8,12 @@ public class JennyMove : MonoBehaviour {
     //controller for all Jenny movements
     public Animator jennyAni;
     public Transform target;
+    public float xRange = 0.1f;
+    public float zRange = 0.1f;
+    public float speed = 2;
     bool walking = false;
-
     float step;
-    float speed = 2;
+    
     //Stored Animations as of 11/27/18
 
     //CAN BE ACCESSED FROM ANY OTHER ANIMATION STATE
@@ -35,7 +37,7 @@ public class JennyMove : MonoBehaviour {
 
         if (walking)
         {
-            if (transform.position == target.position)
+            if (Mathf.Abs(transform.position.x - target.position.x)< xRange && Mathf.Abs(transform.position.z - target.position.z) < zRange)
             {
                 walking = false;
             }
@@ -109,6 +111,8 @@ public class JennyMove : MonoBehaviour {
     {
         jennyAni.Play("jennyWalk");
         jennyAni.SetBool("jennyWalk", true);
+        target.position = new Vector3 (target.position.x, -0.8f, target.position.z);
+
         walking = true;
     }
 
