@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,14 +32,14 @@ public class Petrify : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
-	petrifySound.Play(0);
-   //animator.SetBool("jennyAttack", true);
-    petrifying = true;
+	    petrifySound.Play(0);
+        animator.Play("jennyArmAttack");
+        petrifying = true;
     }
 
     void OnCollisionExit(Collision col)
     {
-	petrifySound.Pause();
+	petrifySound.Stop();
         petrifying = false;
     }
 
