@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Door_Material
+  m_Name: Door_Material 1
   m_Shader: {fileID: 4800000, guid: 4c81ed1c512a84e4285b39eaab006f91, type: 3}
   m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 0
@@ -161,7 +161,7 @@ Material:
     m_Floats:
     - PixelSnap: 0
     - _AmbientOcclusionStrength: 1
-    - _BloodAmount: 0.413
+    - _BloodAmount: 0.818
     - _Blood_FlowIntensity: 1
     - _BulgeShape: 1
     - _BumpScale: 1
@@ -187,7 +187,7 @@ Material:
     - _node_879: 0
     - _norminten: 0
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
     - _Color_Bloof: {r: 0.309, g: 0, b: 0, a: 1}
     - _Color_Multi: {r: 1, g: 1, b: 1, a: 1}
     - _Color_copy: {r: 1, g: 1, b: 1, a: 1}
