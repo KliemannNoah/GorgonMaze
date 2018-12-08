@@ -21,8 +21,10 @@ public class Button1 : MonoBehaviour {
 			doorIsOpening = false;
 		}
 	}
-	
-	void OnMouseDown(){
-		doorIsOpening = true;
+	void OnCollisionEnter(Collision other){
+			doorIsOpening = true;
 	}
+	//void OnMouseDown(){
+	//	doorIsOpening = true;
+	//}
 }
