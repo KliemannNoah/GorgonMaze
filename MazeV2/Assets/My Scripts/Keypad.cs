@@ -9,7 +9,7 @@ public class Keypad : MonoBehaviour {
     public bool onTrigger;
     public bool doorOpen;
     public bool keypadScreen;
-	public bool key1= false;
+	public bool key1;
 	public bool key2;
 	public bool key3;
 	public bool key4;
@@ -17,10 +17,10 @@ public class Keypad : MonoBehaviour {
  
  void Start()
     {
-		//key1 = false;
-		//key2 = false;
-		//key3 = false;
-		//key4 = false;
+		key1 = false;
+		key2 = false;
+		key3 = false;
+		key4 = false;
         anim = gameObject.GetComponent<Animation>();
     }
  
@@ -91,19 +91,22 @@ public class Keypad : MonoBehaviour {
         {
             input = input + "9";
         }
-		if(key1 == true && key2 == true && key3 == true && key4 == true){
+		//if(key1 == true && key2 == true && key3 == true && key4 == true){
+		 if(key1 == true && key2 == true && key3 == true && key4 == false){
+			keypadScreen = false;
 			doorOpen = true;
 			key1 = false;
 			key2 = false;
 			key3 = false;
 			key4 = false;
 			onTrigger = false;
-			keypadScreen = false;
+			
 		}
  
  
         if(input == curPassword)
         {
+			onTrigger = false;
             doorOpen = true;
 			keypadScreen = false;
 			input = "";
@@ -115,16 +118,18 @@ public class Keypad : MonoBehaviour {
 			//var newRot = Quaternion.RotateTowards(doorHinge.rotation, Quaternion.Euler(0.0f, 90.0f, 0.0f), Time.deltaTime * 250);
             //doorHinge.rotation = newRot;
 			//object.Rotate(0,  90, 0);
+			onTrigger = false;
 			transform.Rotate(0, 0, 90);
 			input = "";
 			keypadScreen = false;
+			
 			doorOpen = false;
            // bodka.SetActive (false);
  
  
         }
     }
- 
+ /*
     void OnGUI()
     {
         if(!doorOpen)
@@ -157,4 +162,5 @@ public class Keypad : MonoBehaviour {
             }
         }
     }
+	*/
 }
