@@ -15,7 +15,7 @@ public class TestTrigger : MonoBehaviour {
 	}
 
 
-    void OnTriggerEnter(Collision col) {
+    void OnTriggerEnter(Collider col) {
         Debug.Log("touch!");
     }
 }

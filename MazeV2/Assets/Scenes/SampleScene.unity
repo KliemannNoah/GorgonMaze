@@ -10179,7 +10179,6 @@ GameObject:
   - component: {fileID: 455418758}
   - component: {fileID: 455418761}
   - component: {fileID: 455418760}
-  - component: {fileID: 455418759}
   m_Layer: 0
   m_Name: Door_Wood
   m_TagString: Untagged
@@ -10205,23 +10204,6 @@ Transform:
   m_Father: {fileID: 672954473}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &455418759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 455418757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecd45b3a0ac71b147ba2d99d1bca53aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curPassword: 12345
-  input: 
-  onTrigger: 1
-  doorOpen: 0
-  keypadScreen: 0
-  anim: {fileID: 0}
 --- !u!23 &455418760
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12596,8 +12578,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 568652804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.239, y: 0.321, z: -0.22}
-  m_LocalScale: {x: 0.33933806, y: 0.22466657, z: 1.1241}
+  m_LocalPosition: {x: 0.024, y: 0.235, z: -0.22}
+  m_LocalScale: {x: 0.6568567, y: 0.43488708, z: 1.0881125}
   m_Children:
   - {fileID: 1146109262}
   m_Father: {fileID: 1551746941}
@@ -14279,7 +14261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 672954473}
   - component: {fileID: 672954475}
-  - component: {fileID: 672954474}
+  - component: {fileID: 672954476}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -14301,17 +14283,6 @@ Transform:
   m_Father: {fileID: 349332302}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &672954474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 672954472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cbcbae5f2c2f74409bfd442e5506315, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &672954475
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14322,8 +14293,29 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.150238, y: 1.7387006, z: 2.66719}
-  m_Center: {x: -0.575119, y: -14.739852, z: 0.8335863}
+  m_Size: {x: 2.150238, y: 1.7621431, z: 2.6671898}
+  m_Center: {x: -0.5751194, y: -0.002482296, z: 0.83358735}
+--- !u!114 &672954476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 672954472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd45b3a0ac71b147ba2d99d1bca53aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curPassword: 345
+  input: 
+  onTrigger: 0
+  doorOpen: 0
+  keypadScreen: 0
+  key1: 0
+  key2: 0
+  key3: 0
+  key4: 0
+  anim: {fileID: 0}
 --- !u!4 &675973902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 430774, guid: 681ad5134ad053b44a7e71150dfad977,
@@ -15345,6 +15337,7 @@ GameObject:
   - component: {fileID: 728985039}
   - component: {fileID: 728985038}
   - component: {fileID: 728985037}
+  - component: {fileID: 728985040}
   m_Layer: 0
   m_Name: keypadPiece (3)
   m_TagString: Untagged
@@ -15359,8 +15352,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 728985035}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.294, y: 0.247, z: -0.349}
-  m_LocalScale: {x: 0.1325411, y: 0.03350544, z: 1.1241001}
+  m_LocalPosition: {x: 0.128, y: 0.069, z: -0.72}
+  m_LocalScale: {x: 0.19144237, y: 0.048395257, z: 1.6236501}
   m_Children: []
   m_Father: {fileID: 1551746941}
   m_RootOrder: 4
@@ -15419,6 +15412,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 728985035}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &728985040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 728985035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa00340380644ed428b34eab01b5394f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Door: {fileID: 1860315938}
+  doorIsOpening: 0
 --- !u!1 &730769970 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 130774, guid: 681ad5134ad053b44a7e71150dfad977,
@@ -18810,6 +18816,7 @@ GameObject:
   m_Component:
   - component: {fileID: 854551997}
   - component: {fileID: 854551998}
+  - component: {fileID: 854551999}
   m_Layer: 0
   m_Name: LeftControllerScriptAlias
   m_TagString: Untagged
@@ -18825,7 +18832,7 @@ Transform:
   m_GameObject: {fileID: 854551996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.0506, y: 2.0506, z: 2.0506}
   m_Children: []
   m_Father: {fileID: 1197264791}
   m_RootOrder: 1
@@ -18879,6 +18886,40 @@ MonoBehaviour:
   gripSenseAxisChanged: 0
   gripSensePressed: 0
   controllerVisible: 1
+--- !u!114 &854551999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 854551996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174429e04b0388249a137b2dc0050b66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableTeleport: 1
+  targetListPolicy: {fileID: 0}
+  enableBodyCollisions: 1
+  ignoreGrabbedCollisions: 1
+  ignoreCollisionsWith: []
+  headsetYOffset: 0.2
+  movementThreshold: 0.0015
+  playAreaMovementThreshold: 0.00075
+  standingHistorySamples: 5
+  leanYThreshold: 0.5
+  stepUpYOffset: 0.15
+  stepThicknessMultiplier: 0.5
+  stepDropThreshold: 0.08
+  customRaycast: {fileID: 0}
+  fallRestriction: 0
+  gravityFallYThreshold: 1
+  blinkYThreshold: 0.15
+  floorHeightTolerance: 0.001
+  fallCheckPrecision: 5
+  teleporter: {fileID: 0}
+  customPlayAreaRigidbody: {fileID: 0}
+  customBodyColliderContainer: {fileID: 0}
+  customFootColliderContainer: {fileID: 0}
 --- !u!1001 &855316298
 Prefab:
   m_ObjectHideFlags: 0
@@ -24152,7 +24193,6 @@ GameObject:
   - component: {fileID: 1087211786}
   - component: {fileID: 1087211788}
   - component: {fileID: 1087211787}
-  - component: {fileID: 1087211789}
   m_Layer: 0
   m_Name: Door_Wood
   m_TagString: Untagged
@@ -24222,23 +24262,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1087211785}
   m_Mesh: {fileID: 4300004, guid: 53fd6f5729dcb094ebf37d4437bf647a, type: 3}
---- !u!114 &1087211789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1087211785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecd45b3a0ac71b147ba2d99d1bca53aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curPassword: 12345
-  input: 
-  onTrigger: 1
-  doorOpen: 0
-  keypadScreen: 0
-  anim: {fileID: 0}
 --- !u!1001 &1094948514
 Prefab:
   m_ObjectHideFlags: 0
@@ -25095,7 +25118,6 @@ GameObject:
   - component: {fileID: 1115397850}
   - component: {fileID: 1115397853}
   - component: {fileID: 1115397852}
-  - component: {fileID: 1115397851}
   m_Layer: 0
   m_Name: Door_Wood
   m_TagString: Untagged
@@ -25121,23 +25143,6 @@ Transform:
   m_Father: {fileID: 2069942705}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1115397851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1115397849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecd45b3a0ac71b147ba2d99d1bca53aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curPassword: 12345
-  input: 
-  onTrigger: 1
-  doorOpen: 0
-  keypadScreen: 0
-  anim: {fileID: 0}
 --- !u!23 &1115397852
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29658,6 +29663,7 @@ GameObject:
   - component: {fileID: 1268838570}
   - component: {fileID: 1268838572}
   - component: {fileID: 1268838571}
+  - component: {fileID: 1268838573}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -29700,8 +29706,29 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.150238, y: 1.7387006, z: 2.66719}
-  m_Center: {x: -0.575119, y: -14.739852, z: 0.8335863}
+  m_Size: {x: 2.150238, y: 2.8553553, z: 2.6671903}
+  m_Center: {x: -0.57511896, y: -0.4767555, z: 0.833589}
+--- !u!114 &1268838573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1268838569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd45b3a0ac71b147ba2d99d1bca53aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curPassword: 12345
+  input: 
+  onTrigger: 0
+  doorOpen: 0
+  keypadScreen: 0
+  key1: 0
+  key2: 0
+  key3: 0
+  key4: 0
+  anim: {fileID: 0}
 --- !u!1 &1270647251
 GameObject:
   m_ObjectHideFlags: 0
@@ -29889,6 +29916,7 @@ GameObject:
   - component: {fileID: 1288120089}
   - component: {fileID: 1288120088}
   - component: {fileID: 1288120087}
+  - component: {fileID: 1288120090}
   m_Layer: 0
   m_Name: keypadPiece (1)
   m_TagString: Untagged
@@ -29903,8 +29931,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1288120085}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.294, y: 0.293, z: -0.353}
-  m_LocalScale: {x: 0.1325411, y: 0.03350544, z: 1.1241001}
+  m_LocalPosition: {x: -0.099, y: 0.125, z: -0.75}
+  m_LocalScale: {x: 0.206393, y: 0.05217467, z: 1.7504486}
   m_Children: []
   m_Father: {fileID: 1551746941}
   m_RootOrder: 2
@@ -29963,6 +29991,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1288120085}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1288120090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1288120085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e72a0ee794477489894c29f0c64208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Door: {fileID: 1860315938}
+  doorIsOpening: 0
 --- !u!1 &1289223020 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 130774, guid: 681ad5134ad053b44a7e71150dfad977,
@@ -35265,6 +35306,7 @@ GameObject:
   - component: {fileID: 1551746940}
   - component: {fileID: 1551746939}
   - component: {fileID: 1551746938}
+  - component: {fileID: 1551746942}
   m_Layer: 0
   m_Name: MagicDoor
   m_TagString: Untagged
@@ -35333,7 +35375,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1551746937}
   m_LocalRotation: {x: 4.32978e-17, y: -0.7071067, z: -0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 3.053, y: -2.246, z: 0.617}
+  m_LocalPosition: {x: 7.614, y: -1.507, z: 0.617}
   m_LocalScale: {x: 0.9237639, y: 1.3418385, z: 0.25514117}
   m_Children:
   - {fileID: 568652805}
@@ -35344,6 +35386,19 @@ Transform:
   m_Father: {fileID: 2127792463}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1551746942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1551746937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c759b92629db53941b7e33a8f1a28d31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Door: {fileID: 1860315938}
+  doorIsOpening: 0
 --- !u!1 &1555897150
 GameObject:
   m_ObjectHideFlags: 0
@@ -41306,9 +41361,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1860315939}
   - component: {fileID: 1860315941}
-  - component: {fileID: 1860315940}
+  - component: {fileID: 1860315942}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObjectTestDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41328,17 +41383,6 @@ Transform:
   m_Father: {fileID: 1431340563}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1860315940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1860315938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cbcbae5f2c2f74409bfd442e5506315, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1860315941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41349,8 +41393,29 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.150238, y: 1.7387006, z: 2.66719}
-  m_Center: {x: -0.575119, y: -14.739852, z: 0.8335863}
+  m_Size: {x: 2.150238, y: 0.94498736, z: 2.66719}
+  m_Center: {x: -0.57511896, y: 0.049737394, z: 0.83358973}
+--- !u!114 &1860315942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1860315938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd45b3a0ac71b147ba2d99d1bca53aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curPassword: 2345
+  input: 
+  onTrigger: 0
+  doorOpen: 0
+  keypadScreen: 0
+  key1: 0
+  key2: 0
+  key3: 0
+  key4: 0
+  anim: {fileID: 0}
 --- !u!1001 &1863039351
 Prefab:
   m_ObjectHideFlags: 0
@@ -43121,6 +43186,7 @@ GameObject:
   - component: {fileID: 1962740528}
   - component: {fileID: 1962740527}
   - component: {fileID: 1962740526}
+  - component: {fileID: 1962740529}
   m_Layer: 0
   m_Name: keypadPiece
   m_TagString: Untagged
@@ -43135,8 +43201,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1962740524}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.294, y: 0.345, z: -0.35}
-  m_LocalScale: {x: 0.13254042, y: 0.033506524, z: 1.1241001}
+  m_LocalPosition: {x: 0.099, y: 0.28, z: -0.97}
+  m_LocalScale: {x: 0.18572888, y: 0.04695269, z: 1.5752014}
   m_Children: []
   m_Father: {fileID: 1551746941}
   m_RootOrder: 1
@@ -43195,6 +43261,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1962740524}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1962740529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1962740524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 318f0dbf1898711439f1d21396c13b81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Door: {fileID: 1860315938}
+  doorIsOpening: 0
 --- !u!1 &1964602097 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 130774, guid: 681ad5134ad053b44a7e71150dfad977,
@@ -45095,7 +45174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2069942705}
   - component: {fileID: 2069942707}
-  - component: {fileID: 2069942706}
+  - component: {fileID: 2069942708}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -45117,17 +45196,6 @@ Transform:
   m_Father: {fileID: 1113515269}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2069942706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2069942704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cbcbae5f2c2f74409bfd442e5506315, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &2069942707
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45138,8 +45206,29 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.150238, y: 1.7387006, z: 2.66719}
-  m_Center: {x: -0.575119, y: -14.739852, z: 0.8335863}
+  m_Size: {x: 2.150238, y: 1.5598559, z: 2.66719}
+  m_Center: {x: -0.575119, y: 0.3143591, z: 0.8335853}
+--- !u!114 &2069942708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2069942704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd45b3a0ac71b147ba2d99d1bca53aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curPassword: 543
+  input: 
+  onTrigger: 0
+  doorOpen: 0
+  keypadScreen: 0
+  key1: 0
+  key2: 0
+  key3: 0
+  key4: 0
+  anim: {fileID: 0}
 --- !u!1001 &2074717217
 Prefab:
   m_ObjectHideFlags: 0
@@ -45383,7 +45472,6 @@ GameObject:
   - component: {fileID: 2090928848}
   - component: {fileID: 2090928851}
   - component: {fileID: 2090928850}
-  - component: {fileID: 2090928849}
   m_Layer: 0
   m_Name: Door_Wood
   m_TagString: Untagged
@@ -45409,23 +45497,6 @@ Transform:
   m_Father: {fileID: 1860315939}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2090928849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2090928847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecd45b3a0ac71b147ba2d99d1bca53aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curPassword: 12345
-  input: 
-  onTrigger: 1
-  doorOpen: 0
-  keypadScreen: 0
-  anim: {fileID: 0}
 --- !u!23 &2090928850
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45557,6 +45628,7 @@ GameObject:
   - component: {fileID: 2098399319}
   - component: {fileID: 2098399318}
   - component: {fileID: 2098399317}
+  - component: {fileID: 2098399320}
   m_Layer: 0
   m_Name: keypadPiece (2)
   m_TagString: Untagged
@@ -45571,8 +45643,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2098399315}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.294, y: 0.391, z: -0.34}
-  m_LocalScale: {x: 0.1325411, y: 0.03350544, z: 1.1241001}
+  m_LocalPosition: {x: -0.186, y: 0.327, z: -0.94}
+  m_LocalScale: {x: 0.20961377, y: 0.052988853, z: 1.7777643}
   m_Children: []
   m_Father: {fileID: 1551746941}
   m_RootOrder: 3
@@ -45631,6 +45703,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2098399315}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2098399320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2098399315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e0b7a91d9eb3d41aba7696414af884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Door: {fileID: 1860315938}
+  doorIsOpening: 0
 --- !u!1 &2107682239
 GameObject:
   m_ObjectHideFlags: 0

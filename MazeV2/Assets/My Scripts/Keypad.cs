@@ -9,10 +9,18 @@ public class Keypad : MonoBehaviour {
     public bool onTrigger;
     public bool doorOpen;
     public bool keypadScreen;
+	public bool key1= false;
+	public bool key2;
+	public bool key3;
+	public bool key4;
 	public Animation anim;
  
  void Start()
     {
+		//key1 = false;
+		//key2 = false;
+		//key3 = false;
+		//key4 = false;
         anim = gameObject.GetComponent<Animation>();
     }
  
@@ -83,7 +91,15 @@ public class Keypad : MonoBehaviour {
         {
             input = input + "9";
         }
- 
+		if(key1 == true && key2 == true && key3 == true && key4 == true){
+			doorOpen = true;
+			key1 = false;
+			key2 = false;
+			key3 = false;
+			key4 = false;
+			onTrigger = false;
+			keypadScreen = false;
+		}
  
  
         if(input == curPassword)
@@ -101,6 +117,7 @@ public class Keypad : MonoBehaviour {
 			//object.Rotate(0,  90, 0);
 			transform.Rotate(0, 0, 90);
 			input = "";
+			keypadScreen = false;
 			doorOpen = false;
            // bodka.SetActive (false);
  
