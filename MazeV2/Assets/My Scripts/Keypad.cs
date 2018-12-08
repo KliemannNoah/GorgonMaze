@@ -13,6 +13,7 @@ public class Keypad : MonoBehaviour {
 	public bool key2;
 	public bool key3;
 	public bool key4;
+	public bool opened;
 	public Animation anim;
  
  void Start()
@@ -94,6 +95,7 @@ public class Keypad : MonoBehaviour {
 		//if(key1 == true && key2 == true && key3 == true && key4 == true){
 		 if(key1 == true && key2 == true && key3 == true && key4 == false){
 			keypadScreen = false;
+			opened = true;
 			doorOpen = true;
 			key1 = false;
 			key2 = false;
