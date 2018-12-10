@@ -28,7 +28,7 @@ public class button4 : MonoBehaviour {
 	
 	void OnCollisionEnter(Collision other){
 			doorIsOpening = true;
-			transform.Translate(Vector3.forward * .4f);
+			transform.Translate(Vector3.forward * .9f);
 			StartCoroutine(ExecuteAfterTime(3));
 			
 
@@ -36,7 +36,7 @@ public class button4 : MonoBehaviour {
 	
 	IEnumerator ExecuteAfterTime(float time){
 		yield return new WaitForSeconds(time);
-		transform.Translate(Vector3.forward * -.4f);
+		transform.Translate(Vector3.forward * -.9f);
 		
 	}
 	//void OnMouseDown(){
