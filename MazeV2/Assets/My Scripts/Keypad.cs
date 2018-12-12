@@ -15,8 +15,10 @@ public class Keypad : MonoBehaviour {
 	public bool key4;
 	public bool opened;
 	public Animation anim;
- 
- void Start()
+    public GameObject Jenny;
+
+
+    void Start()
     {
 		key1 = false;
 		key2 = false;
@@ -124,8 +126,9 @@ public class Keypad : MonoBehaviour {
 			transform.Rotate(0, 0, 90);
 			input = "";
 			keypadScreen = false;
-			
+            Instantiate(Jenny);
 			doorOpen = false;
+
            // bodka.SetActive (false);
  
  
