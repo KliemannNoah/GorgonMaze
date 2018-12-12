@@ -47206,10 +47206,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jennyAni: {fileID: 1780797939}
-  target: {fileID: 2025317802}
-  xRange: 0.1
-  zRange: 0.1
-  speed: 2
+  leader: {fileID: 2028315918}
+  follower: {fileID: 1780797937}
+  mainCamera: {fileID: 2028315920}
+  bubbleSize: 0.5
+  stuckBubble: 0.5
+  stuckTolerance: 200
+  speedRatio: 0.1
+  move: 0
+  scene: 0
 --- !u!95 &1780797939
 Animator:
   serializedVersion: 3
@@ -52755,11 +52760,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224861586572071280, guid: 55bcebf0300be464cb5f7ef8d78bb36d,
     type: 2}
   m_PrefabInternal: {fileID: 2023078553}
---- !u!4 &2025317802 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4474660056667814, guid: afec65f27dcd2c74cba31fc61eea61e6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1211479801}
 --- !u!1 &2025372327
 GameObject:
   m_ObjectHideFlags: 0
