@@ -95,8 +95,8 @@ public class JennyMove : MonoBehaviour
             //teleportation
             if (worldPoint.x < 0 || worldPoint.z < 0 || worldPoint.x > Screen.width || worldPoint.z > Screen.height)
             {
-                if (leadWorldPoint.x > 0 || leadWorldPoint.z > 0 || leadWorldPoint.x < Screen.width || leadWorldPoint.z < Screen.height)
-                    follower.transform.position = new Vector3(leader.transform.position.x, leader.transform.position.y, leader.transform.position.z);
+               // if (leadWorldPoint.x > 0 || leadWorldPoint.z > 0 || leadWorldPoint.x < Screen.width || leadWorldPoint.z < Screen.height)
+                //    follower.transform.position = new Vector3(leader.transform.position.x, leader.transform.position.y, leader.transform.position.z);
             }
 
             //Check if follower is stuck on an object. Note the change in position, and if it is too small too many times, then teleport
@@ -114,13 +114,14 @@ public class JennyMove : MonoBehaviour
             if (stuckUpdates > stuckTolerance)
             {
                 stuckUpdates = 0;
-                follower.transform.position = new Vector3(leader.transform.position.x, leader.transform.position.y, leader.transform.position.z);
+                //follower.transform.position = new Vector3(leader.transform.position.x, leader.transform.position.y, leader.transform.position.z);
             }
 
             if (move)
             {
                 float step = speed * UnityEngine.Time.deltaTime;
-                follower.transform.position = Vector3.MoveTowards(follower.transform.position, leader.transform.position, step);
+            jennyWalk();
+            follower.transform.position = Vector3.MoveTowards(follower.transform.position, leader.transform.position, step);
             }
             else
             {
