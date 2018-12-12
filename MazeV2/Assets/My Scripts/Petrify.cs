@@ -1,4 +1,4 @@
-
+﻿
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +8,7 @@ using UnityEngine;
 public class Petrify : MonoBehaviour {
 
     public AudioSource petrifySound;
-    public GameObject source;
+    //public GameObject source;
     public GameObject playerL;
     public GameObject playerR;
     public TextMesh uiPiece;
@@ -23,14 +23,21 @@ public class Petrify : MonoBehaviour {
     void Start () {
     }
 
-    void Update() {
+    void Update()
+    {
         if (petrifying)
         {
             health -= healthMod;
         }
-        uiPiece.text = "Current Health: " + health;
+        if (health > 0)
+        {
+            uiPiece.text = "Current Health: " + health;
+        }
+        else
+        {
+            uiPiece.text = "You Lose!";
+        }
     }
-
     void OnCollisionEnter(Collision col)
     {
 	    petrifySound.Play(0);

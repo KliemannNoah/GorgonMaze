@@ -19,6 +19,7 @@ public class JennyMove : MonoBehaviour
         public float speedRatio = 0.1f;
         public bool move = false;
         public bool scene = false; //changes to scene mode
+        public Collider col;
 
 
 
@@ -120,8 +121,8 @@ public class JennyMove : MonoBehaviour
             if (move)
             {
                 float step = speed * UnityEngine.Time.deltaTime;
-            jennyWalk();
-            follower.transform.position = Vector3.MoveTowards(follower.transform.position, leader.transform.position, step);
+                jennyAni.Play("jennyWalk");
+                follower.transform.position = Vector3.MoveTowards(follower.transform.position, leader.transform.position, step);
             }
             else
             {
@@ -147,7 +148,6 @@ public class JennyMove : MonoBehaviour
             }
 
         }
-
 
         public void jennyHide()
         {
@@ -189,7 +189,7 @@ public class JennyMove : MonoBehaviour
 
         public void jennyWalk()
         {
-            jennyAni.Play("jennyWalk");
+            //jennyAni.Play("jennyWalk");
             jennyAni.SetBool("jennyWalk", true);
         }
 
