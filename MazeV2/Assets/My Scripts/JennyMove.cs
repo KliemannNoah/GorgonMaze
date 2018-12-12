@@ -51,19 +51,22 @@ public class JennyMove : MonoBehaviour {
       
 
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || OVRInput.Get(OVRInput.RawButton.Y) )
         {
             jennyArmAttack();
+            jennyAgony();
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) || OVRInput.Get(OVRInput.RawButton.X))
         {
             jennyWalk();
+            
         }
 
-        if (Input.GetMouseButtonDown(2))
+        if (Input.GetMouseButtonDown(2) || OVRInput.Get(OVRInput.RawButton.X))
         {
             jennyWalk();
+            
         }
 
     }

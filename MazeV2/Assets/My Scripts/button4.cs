@@ -7,12 +7,14 @@ public class button4 : MonoBehaviour {
 	public GameObject Door;
 	public bool doorIsOpening;
 	private Keypad keypad;
-	
-	// Use this for initialization
-	void Start () {
+    Collider m_Collider;
+
+    // Use this for initialization
+    void Start () {
 		keypad = Door.GetComponent<Keypad>();
-		//var myScript Keypad = GetComponent.<Keypad>();
-	}
+        m_Collider = GetComponent<Collider>();
+        //var myScript Keypad = GetComponent.<Keypad>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -28,15 +30,18 @@ public class button4 : MonoBehaviour {
 	
 	void OnCollisionEnter(Collision other){
 			doorIsOpening = true;
-			transform.Translate(Vector3.forward * .9f);
-			StartCoroutine(ExecuteAfterTime(3));
+            m_Collider.enabled = !m_Collider.enabled;
+            transform.Translate(Vector3.forward * .9f);
+			StartCoroutine(ExecuteAfterTime(10));
 			
 
 	}
 	
 	IEnumerator ExecuteAfterTime(float time){
 		yield return new WaitForSeconds(time);
-		transform.Translate(Vector3.forward * -.9f);
+        m_Collider.enabled = !m_Collider.enabled;
+
+        transform.Translate(Vector3.forward * -.9f);
 		
 	}
 	//void OnMouseDown(){

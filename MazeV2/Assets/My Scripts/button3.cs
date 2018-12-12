@@ -37,15 +37,16 @@ public class button3 : MonoBehaviour {
 			doorIsOpening = true;
         m_Collider.enabled = !m_Collider.enabled;
         transform.Translate(Vector3.forward * .9f);
-			StartCoroutine(ExecuteAfterTime(3));
+			StartCoroutine(ExecuteAfterTime(10));
 			
 
 	}
 	
 	IEnumerator ExecuteAfterTime(float time){
 		yield return new WaitForSeconds(time);
-		transform.Translate(Vector3.forward * -.9f);
         m_Collider.enabled = !m_Collider.enabled;
+        transform.Translate(Vector3.forward * -.9f);
+        
     }
 	//void OnMouseDown(){
 	//	doorIsOpening = true;
