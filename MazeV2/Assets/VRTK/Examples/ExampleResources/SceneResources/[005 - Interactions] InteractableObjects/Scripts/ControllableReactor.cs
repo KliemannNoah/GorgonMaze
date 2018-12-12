@@ -3,6 +3,7 @@
     using UnityEngine;
     using UnityEngine.UI;
     using VRTK.Controllables;
+    using UnityEngine.SceneManagement;
 
     public class ControllableReactor : MonoBehaviour
     {
@@ -10,6 +11,13 @@
         public Text displayText;
         public string outputOnMax = "Maximum Reached";
         public string outputOnMin = "Minimum Reached";
+        private Keypad keypad;
+        public GameObject Door;
+
+        void Start()
+        {
+            keypad = Door.GetComponent<Keypad>();
+        }
 
         protected virtual void OnEnable()
         {
@@ -29,6 +37,10 @@
 
         protected virtual void MaxLimitReached(object sender, ControllableEventArgs e)
         {
+            if (keypad.opened)
+            {
+                SceneManager.LoadScene("SecondFloor");
+            }
             if (outputOnMax != "")
             {
                 Debug.Log(outputOnMax);

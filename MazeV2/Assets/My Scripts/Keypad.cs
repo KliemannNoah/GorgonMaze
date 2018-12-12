@@ -54,56 +54,6 @@ public class Keypad : MonoBehaviour {
     void Update()
     {
  
-        if(Input.GetKeyDown(KeyCode.Alpha0) || Input.GetKeyDown(KeyCode.Keypad0))
-        {
-            input = input + "0";
-        }
- 
- 
-        if(Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1))
-        {
-            input = input + "1";
-        }
- 
-        if(Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad2))
-        {
-            input = input + "2";
-        }
- 
-        if(Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad3))
-        {
-            input = input + "3";
-        }
- 
-        if(Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Keypad4))
-        {
-            input = input + "4";
-        }
- 
-        if(Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Keypad5))
-        {
-            input = input + "5";
-        }
- 
-        if(Input.GetKeyDown(KeyCode.Alpha6) || Input.GetKeyDown(KeyCode.Keypad6))
-        {
-            input = input + "6";
-        }
- 
-        if(Input.GetKeyDown(KeyCode.Alpha7) || Input.GetKeyDown(KeyCode.Keypad7))
-        {
-            input = input + "7";
-        }
- 
-        if(Input.GetKeyDown(KeyCode.Alpha8) || Input.GetKeyDown(KeyCode.Keypad8))
-        {
-            input = input + "8";
-        }
- 
-        if(Input.GetKeyDown(KeyCode.Alpha9) || Input.GetKeyDown(KeyCode.Keypad9))
-        {
-            input = input + "9";
-        }
 		//if(key1 == true && key2 == true && key3 == true && key4 == true){
 		 if(key1 == true && key2 == true && key3 == true && key4 == false){
 			keypadScreen = false;
