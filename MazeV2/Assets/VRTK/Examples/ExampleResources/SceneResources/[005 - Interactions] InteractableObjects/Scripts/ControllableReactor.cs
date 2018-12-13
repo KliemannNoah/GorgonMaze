@@ -39,7 +39,7 @@
         {
             if (keypad.opened)
             {
-                SceneManager.LoadScene("SecondFloor");
+                SceneManager.LoadScene("Level 3");
             }
             if (outputOnMax != "")
             {

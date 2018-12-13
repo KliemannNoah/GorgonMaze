@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
@@ -14,6 +15,8 @@ public class Petrify : MonoBehaviour {
     public TextMesh uiPiece;
 
     public Animator animator;
+
+
 
     public float health=100;
     public float healthMod = 1;
@@ -36,6 +39,8 @@ public class Petrify : MonoBehaviour {
         else
         {
             uiPiece.text = "You Lose!";
+            StartCoroutine(ExecuteAfterTime(3));
+            
         }
     }
     void OnCollisionEnter(Collision col)
@@ -51,4 +56,11 @@ public class Petrify : MonoBehaviour {
         petrifying = false;
     }
 
+
+    IEnumerator ExecuteAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene("Level 2");
+
+    }
 }
